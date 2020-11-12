@@ -1,4 +1,4 @@
-Create table schemas for each of the six CSV file 
+--Create table schemas for each of the six CSV file 
 --Specify data types, primary keys,foreign keys, and other constraints. 
 
 
@@ -64,5 +64,18 @@ CREATE TABLE Salaries(
 );
 
 SELECT * FROM Salaries;
+
+--DATA ANALYSIS
+
+-- 1.List the following details of each employee: employee number, last name, first name, sex, and salary.
+
+SELECT Employees.emp_no, Employees.Last_name, Employees.First_name, Employees.Sex, Salaries.Salary
+FROM Salaries
+JOIN Employees ON 
+Employees.Emp_no = Salaries.Emp_no;
+
+
+
+
 
 	
