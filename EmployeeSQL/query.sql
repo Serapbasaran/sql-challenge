@@ -25,10 +25,39 @@ CREATE TABLE Employees(
 	Last_name VARCHAR(30) NOT NULL,
 	Sex VARCHAR(30) NOT NULL,
 	Hire_date DATE NOT NULL,
-	PRIMARY KEY(Emp_no)
-	FOREIGN KEY(Title_ID) REFERENCES Titles (Title_ID);
+	PRIMARY KEY(Emp_no),
+	FOREIGN KEY(Title_ID) REFERENCES Titles (Title_ID)
 );
 
 SELECT * FROM Employees;
 
+CREATE TABLE Dept_Manager(
+   Dept_No VARCHAR(30) NOT NULL,
+   Emp_No INTEGER NOT NULL,
+   PRIMARY KEY (Dept_No,Emp_No),
+   FOREIGN KEY (Dept_No) REFERENCES Departments (Dept_No),
+   FOREIGN KEY (Emp_No) REFERENCES Employees (Emp_No)
+);
 
+SELECT * FROM Dept_Manager;
+
+CREATE TABLE Dept_Employee (
+   Emp_No INTEGER NOT NULL,
+   Dept_No VARCHAR NOT NULL,
+   PRIMARY KEY (Emp_No, Dept_No),
+   FOREIGN KEY (Emp_No) REFERENCES Employees (Emp_No),
+   FOREIGN KEY (Dept_No) REFERENCES Departments (Dept_No)
+);
+
+SELECT * FROM Dept_Employee;
+
+CREATE TABLE Salaries(
+   Emp_No INTEGER NOT NULL,
+   Salary INTEGER NOT NULL,
+   PRIMARY KEY (Emp_No),
+   FOREIGN KEY (Emp_No) REFERENCES Employees (Emp_No)
+);
+
+SELECT * FROM Salaries;
+
+	
