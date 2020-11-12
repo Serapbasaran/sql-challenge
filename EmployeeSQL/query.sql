@@ -71,7 +71,7 @@ SELECT * FROM Salaries;
 
 SELECT Employees.emp_no, Employees.Last_name, Employees.First_name, Employees.Sex, Salaries.Salary
 FROM Salaries
-JOIN Employees ON 
+INNER JOIN Employees ON 
 Employees.Emp_no = Salaries.Emp_no;
 
 -- 2.List first name, last name, and hire date for employees who were hired in 1986.
@@ -85,10 +85,21 @@ WHERE hire_date BETWEEN '1986-01-01' AND '1987-01-01';
 
 SELECT dept_manager.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name
 FROM departments
-JOIN dept_manager ON
+INNER JOIN dept_manager ON
 departments.dept_no=dept_manager.dept_no
-JOIN employees ON
+INNER JOIN employees ON
 dept_manager.emp_no=employees.emp_no
+
+-- 4.List the department of each employee with the following information: employee number, last name, 
+-- first name, and department name.
+
+SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM employees
+INNER JOIN dept_employee ON
+employees.emp_no=dept_employee.emp_no
+INNER JOIN departments ON
+dept_employee.dept_no=departments.dept_no
+
 
 
 
