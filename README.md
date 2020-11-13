@@ -14,6 +14,7 @@ Data Analysis
 Instructions
 
 Data Modeling
+
 Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like http://www.quickdatabasediagrams.com.
 
 Data Engineering
@@ -31,6 +32,7 @@ Import each CSV file into the corresponding SQL table. Note be sure to import th
 
 
 Data Analysis
+
 Once you have a complete database, do the following:
 
 
@@ -60,6 +62,7 @@ In descending order, list the frequency count of employee last names, i.e., how 
 
 
 Bonus (Optional)
+
 As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
 
 
