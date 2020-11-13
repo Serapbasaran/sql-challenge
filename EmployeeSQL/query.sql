@@ -72,7 +72,7 @@ SELECT * FROM Salaries;
 SELECT Employees.emp_no, Employees.Last_name, Employees.First_name, Employees.Sex, Salaries.Salary
 FROM Salaries
 INNER JOIN Employees ON 
-Employees.Emp_no = Salaries.Emp_no;
+Employees.Emp_no = Salaries.Emp_no
 
 -- 2.List first name, last name, and hire date for employees who were hired in 1986.
 
